@@ -1,0 +1,164 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: blanchedalmond;
+}
+
+/* Header styles */
+.container {
+  text-align: center;
+  background-color: lightseagreen;
+  padding: 50px;
+  height: 200px;
+}
+
+.webpagehead {
+  color: white;
+}
+
+h1{
+  font-size: 3em;
+}
+h4{
+  font-size: 1.6em;
+}
+
+/* Navigation styles */
+.navbar {
+  background-color: yellow;
+  text-align: center;
+  padding: 10px;
+}
+
+.navbar ul {
+  list-style-type: none;
+}
+
+.navbar li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: green;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: red;
+}
+
+/* Main content section */
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.sectionbox {
+  background-color: #ff94a6;
+  padding: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 800px;
+}
+
+.sectionbox h2 {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.sectionbox p {
+  text-align: justify;
+}
+
+/* Table styles */
+.course-table {
+  width: 100%;
+  margin-top: 10px;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.course-table td {
+  padding: 5px;
+  border-bottom: 1px solid blue;
+}
+
+/* Responsive image */
+.sectionbox img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.educationtable{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.educationtable ul{
+  list-style-type: none;
+  align-content: flex-end;
+}
+
+.like-button {
+  background-color: #4CAF50; 
+  border: 2px solid blue; 
+  color: white; 
+  padding: 15px 25px; 
+  text-align: center; 
+  text-decoration: none; 
+  display: inline-block; 
+  font-size: 20px; 
+  margin: 4px 2px; 
+  cursor: pointer; 
+  border-radius: 12px; 
+  transition-duration: 0.4s; 
+}
+
+.like-button:hover {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50; 
+}
+
+.contact-logos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+}
+
+.contact-logos a {
+  text-decoration: none;
+}
+
+.logo {
+    width: 100px;  /* Adjust the size as needed */
+    height: auto;
+    transition: transform 0.3s ease,
+}
+
+.logo:hover {
+    transform: scale(1.5);
+}
