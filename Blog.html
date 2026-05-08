@@ -1,80 +1,148 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Uttaran Webpage</title>
-  <link rel="shortcut icon" type="image/png" href="Images/uclogo.jpg">
-  <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-
-  <header class="container">
-    <div class="webpagehead">
-      <h1>Uttaran Choudhurry</h1>
-      <h4>My Personal Website</h4>
-    </div>  
-  </header>
-
-  <nav class="navbar">
-    <ul>
-      <li><a href="index.html"><h2>Home</h2></a></li>
-      <li><a href="Research.html"><h2>Research</h2></a></li>
-      <li><a href="Teaching.html"><h2>Teaching</h2></a></li>
-      <li><a href="Blog.html"><h2>Blog</h2></a></li>
-      <li><a href="Project.html"><h2>Project</h2></a></li>
-      <li><a href="About.html"><h2>About</h2></a></li>
-      <li><a href="Contact.html"><h2>Contact</h2></a></li>
-    </ul>
-  </nav>
-
-
-  <main class="flex-container">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Uttaran Choudhurry</title> 
+    <link rel="shortcut icon" type="image/png" href="Images/uclogo.jpg">
     
-    <section class="sectionbox">
-      <h2>Blog</h2>
-      <p>This is a collection of all beautiful and useful problems, puzzles, notes and many other random things.</p>
-      <div class="topicbox">
-        <h4>Notes Collection</h4>
-        <ol>
-          <li>Note 1</li>
-          <li>Note 2</li> 
-          <li>Note 3</li>
-        </ol>
-      </div>
-      <div class="linkcollection">
-        <h4>Important Links</h4>
-        <ol>
-          <li><a href="https://people.math.osu.edu/sinnott.1/ReadingClassics/">Reading Classics</a></li>
-          <li>Note 2</li> 
-          <li>Note 3</li>
-        </ol>
-      </div> 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    animation: { 'blob': 'blob 7s infinite' },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200 font-sans antialiased overflow-x-hidden selection:bg-blue-500 selection:text-white flex flex-col min-h-screen">
 
-      <div class="linkcollection">
-        <h4>Math PhD Qualifier Questionbank</h4>
-        <ol>
-          <li><a href="https://www.memphis.edu/msci/grad/exams.php">University of Memphis</a></li>
-          <li><a href="https://www.math.purdue.edu/academic/grad/qualexams.html">Purdue University</a>  (Algebra- MA55300, Real Analysis- MA 54400)</li>
-        </ol>
-      </div>  
+    <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob"></div>
+        <div class="absolute top-0 right-1/4 w-96 h-96 bg-emerald-600/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob animation-delay-2000"></div>
+    </div>
 
-      <div class="linkcollection">
-        <h4>Math PhD Qualifier Questions with Solutions</h4>
-        <ol>
-          <li><a href="https://blogs.uoregon.edu/mathresources/qualifying-exam-archives/">University of Oregon</a>  </li>
-          <li><a href="https://www.kent.edu/math/graduate-qualifying-exams">Kent State University</a> </li> 
-          <li><a href="https://www.math.harvard.edu/graduate/study-the-qualifying-exam/some-old-qualifying-exams/">Harvard University</a> </li>
-        </ol>
-      </div>  
+    <nav class="w-full glass border-b border-slate-800 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold tracking-tighter text-white hover:opacity-80 transition-opacity">UC<span class="text-blue-500">.</span></a>
+            
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-300">
+                <a href="index.html" class="hover:text-white transition-colors">Home</a>
+                <a href="Research.html" class="hover:text-white transition-colors">Research</a>
+                <a href="Teaching.html" class="hover:text-white transition-colors">Teaching</a>
+                <a href="Project.html" class="hover:text-white transition-colors">Projects</a>
+                <a href="Blog.html" class="text-white font-semibold">Blog</a>
+            </div>
+        </div>
+    </nav>
 
-      
-      <div class="problems">
-        <h4>Problem Collection</h4>
-      </div>
-      <div class="puzzles">
-        <h4>Puzzle Collection</h4>
-      </div>
-    </section>
-  </main>
+    <main class="max-w-4xl mx-auto px-6 pt-16 pb-20 flex-grow w-full">
+        
+        <div class="mb-12">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">Blog & Resources</h1>
+            <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-emerald-500 rounded-full"></div>
+        </div>
+
+        <div class="glass rounded-2xl p-8 md:p-12 shadow-2xl">
+            <div class="max-w-none text-slate-300 space-y-10">
+                
+                <p class="text-lg leading-relaxed text-slate-300 border-l-4 border-blue-500 pl-4 bg-blue-500/5 py-2 rounded-r-lg">
+                    This is a collection of all beautiful and useful problems, puzzles, notes and many other random things.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                            <span class="text-blue-400">📝</span> Notes Collection
+                        </h3>
+                        <ol class="space-y-2 list-decimal list-inside text-slate-400 marker:text-blue-500 marker:font-semibold">
+                            <li class="hover:text-slate-200 transition-colors">Note 1</li>
+                            <li class="hover:text-slate-200 transition-colors">Note 2</li>
+                            <li class="hover:text-slate-200 transition-colors">Note 3</li>
+                        </ol>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                            <span class="text-emerald-400">🔗</span> Important Links
+                        </h3>
+                        <ol class="space-y-2 list-decimal list-inside text-slate-400 marker:text-emerald-500 marker:font-semibold">
+                            <li><a href="https://people.math.osu.edu/sinnott.1/ReadingClassics/" class="text-blue-400 hover:text-blue-300 hover:underline transition-all">Reading Classics</a></li>
+                            <li class="hover:text-slate-200 transition-colors">Note 2</li>
+                            <li class="hover:text-slate-200 transition-colors">Note 3</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <hr class="border-slate-800">
+
+                <div class="space-y-10">
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-4">Math PhD Qualifier Questionbank</h3>
+                        <ol class="space-y-3 list-decimal list-inside text-slate-400 marker:text-purple-500 marker:font-semibold">
+                            <li><a href="https://www.memphis.edu/msci/grad/exams.php" class="text-blue-400 hover:text-blue-300 hover:underline transition-all">University of Memphis</a></li>
+                            <li><a href="https://www.math.purdue.edu/academic/grad/qualexams.html" class="text-blue-400 hover:text-blue-300 hover:underline transition-all">Purdue University</a> <span class="text-sm text-slate-500 ml-1">(Algebra- MA55300, Real Analysis- MA 54400)</span></li>
+                        </ol>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-4">Math PhD Qualifier Questions with Solutions</h3>
+                        <ol class="space-y-3 list-decimal list-inside text-slate-400 marker:text-purple-500 marker:font-semibold">
+                            <li><a href="https://blogs.uoregon.edu/mathresources/qualifying-exam-archives/" class="text-blue-400 hover:text-blue-300 hover:underline transition-all">University of Oregon</a></li>
+                            <li><a href="https://www.kent.edu/math/graduate-qualifying-exams" class="text-blue-400 hover:text-blue-300 hover:underline transition-all">Kent State University</a></li>
+                            <li><a href="https://www.math.harvard.edu/graduate/study-the-qualifying-exam/some-old-qualifying-exams/" class="text-blue-400 hover:text-blue-300 hover:underline transition-all">Harvard University</a></li>
+                        </ol>
+                    </div>
+                </div>
+
+                <hr class="border-slate-800">
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-800 hover:border-blue-500/30 transition-colors">
+                        <h4 class="text-lg font-bold text-white mb-2">Problem Collection</h4>
+                        <p class="text-sm text-slate-500">Curated mathematical problems coming soon.</p>
+                    </div>
+                    
+                    <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-800 hover:border-emerald-500/30 transition-colors">
+                        <h4 class="text-lg font-bold text-white mb-2">Puzzle Collection</h4>
+                        <p class="text-sm text-slate-500">Logical puzzles and brain teasers coming soon.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="border-t border-slate-800 mt-auto">
+        <div class="max-w-6xl mx-auto px-6 py-8 flex justify-between items-center text-slate-500 text-sm">
+            <p>© 2026 Uttaran Choudhurry. All rights reserved.</p>
+            <div class="space-x-4">
+                <a href="About.html" class="hover:text-white transition-colors">About</a>
+                <a href="Contact.html" class="hover:text-white transition-colors">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
 </html>
