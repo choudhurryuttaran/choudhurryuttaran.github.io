@@ -1,65 +1,123 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Uttaran Webpage</title>
-  <link rel="shortcut icon" type="image/png" href="Images/uclogo.jpg">
-  <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teaching | Uttaran Choudhurry</title> 
+    <link rel="shortcut icon" type="image/png" href="Images/uclogo.jpg">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    animation: { 'blob': 'blob 7s infinite' },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+    </style>
 </head>
-<body>
+<body class="bg-slate-950 text-slate-200 font-sans antialiased overflow-x-hidden selection:bg-blue-500 selection:text-white flex flex-col min-h-screen">
 
-  <header class="container">
-    <div class="webpagehead">
-      <h1>Uttaran Choudhurry</h1>
-      <h4>My Personal Website</h4>
-    </div>  
-  </header>
-
-  <nav class="navbar">
-    <ul>
-      <li><a href="index.html"><h2>Home</h2></a></li>
-      <li><a href="Research.html"><h2>Research</h2></a></li>
-      <li><a href="Teaching.html"><h2>Teaching</h2></a></li>
-      <li><a href="Blog.html"><h2>Blog</h2></a></li>
-      <li><a href="Project.html"><h2>Project</h2></a></li>
-      <li><a href="About.html"><h2>About</h2></a></li>
-      <li><a href="Contact.html"><h2>Contact</h2></a></li>
-    </ul>
-  </nav>
-
-
-<main class="flex-container">
-
-  <section class="sectionbox">
-    <h2>Teaching</h2>
-    <img src="Images/Teaching.jpg" alt="Teaching Image" width="200">
-    <div>
-      <h4 style="text-align: center;">Classes Taught</h4>
-      <table class="course-table">
-        <tr>
-          <td><u>Session</u></td>
-          <td><u>Course</u></td>
-        </tr>
-        <tr>
-          <td>Fall 2022</td>
-          <td>College Algebra</td>
-        </tr>
-        <tr>
-          <td>Fall 2023</td>
-          <td>Foundation of Mathematics</td>
-        </tr>
-        <tr>
-          <td>Spring 2024</td>
-          <td>Probability and Statistics</td>
-        </tr> 
-      </table>
+    <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob"></div>
+        <div class="absolute top-0 right-1/4 w-96 h-96 bg-emerald-600/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob animation-delay-2000"></div>
     </div>
-  </section>
 
-</main>
+    <nav class="w-full glass border-b border-slate-800 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold tracking-tighter text-white hover:opacity-80 transition-opacity">UC<span class="text-blue-500">.</span></a>
+            
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-300">
+                <a href="index.html" class="hover:text-white transition-colors">Home</a>
+                <a href="Research.html" class="hover:text-white transition-colors">Research</a>
+                <a href="Teaching.html" class="text-white font-semibold">Teaching</a>
+                <a href="Project.html" class="hover:text-white transition-colors">Projects</a>
+                <a href="Blog.html" class="hover:text-white transition-colors">Blog</a>
+                <a href="Contact.html" class="hover:text-white transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
 
-  
+    <main class="max-w-4xl mx-auto px-6 pt-16 pb-20 flex-grow w-full">
+        
+        <div class="mb-12">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">Teaching Experience</h1>
+            <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-emerald-500 rounded-full"></div>
+        </div>
 
+        <div class="glass rounded-2xl p-8 md:p-12 shadow-2xl">
+            <div class="space-y-12">
+                
+                <div class="flex justify-center">
+                    <img 
+                        src="Images/Teaching.jpg" 
+                        alt="Teaching" 
+                        class="rounded-2xl border border-slate-700 shadow-xl shadow-blue-900/20 object-cover w-full max-w-md hover:scale-[1.02] transition-transform duration-300"
+                    >
+                </div>
 
+                <div class="space-y-6">
+                    <h2 class="text-2xl font-bold text-white text-center">Classes Taught</h2>
+                    
+                    <div class="overflow-x-auto rounded-xl border border-slate-800 bg-slate-900/50">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-slate-800/50 text-slate-300 text-sm uppercase tracking-wider border-b border-slate-700">
+                                    <th class="px-6 py-4 font-semibold w-1/3">Session</th>
+                                    <th class="px-6 py-4 font-semibold">Course</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-slate-400 divide-y divide-slate-800/50">
+                                <tr class="hover:bg-slate-800/30 transition-colors">
+                                    <td class="px-6 py-4 font-medium text-blue-400">Fall 2022</td>
+                                    <td class="px-6 py-4 text-slate-200">College Algebra</td>
+                                </tr>
+                                <tr class="hover:bg-slate-800/30 transition-colors">
+                                    <td class="px-6 py-4 font-medium text-blue-400">Fall 2023</td>
+                                    <td class="px-6 py-4 text-slate-200">Foundation of Mathematics</td>
+                                </tr>
+                                <tr class="hover:bg-slate-800/30 transition-colors">
+                                    <td class="px-6 py-4 font-medium text-blue-400">Spring 2024</td>
+                                    <td class="px-6 py-4 text-slate-200">Probability and Statistics</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="border-t border-slate-800 mt-auto">
+        <div class="max-w-6xl mx-auto px-6 py-8 flex justify-between items-center text-slate-500 text-sm">
+            <p>© 2026 Uttaran Choudhurry. All rights reserved.</p>
+            <div class="space-x-4">
+                <a href="About.html" class="hover:text-white transition-colors">About</a>
+                <a href="Contact.html" class="hover:text-white transition-colors">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
 </html>
